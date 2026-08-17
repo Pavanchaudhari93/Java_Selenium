@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="2" failed="4" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-08-12T18:43:40 IST" name="Command line suite" finished-at="2026-08-12T18:44:06 IST" duration-ms="25476">
+    <groups>
+      <group name="api">
+        <method signature="UserApiTest.testCreatePost(com.framework.model.User)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" name="testCreatePost" class="com.framework.tests.api.UserApiTest"/>
+        <method signature="UserApiTest.testDeletePost()[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" name="testDeletePost" class="com.framework.tests.api.UserApiTest"/>
+        <method signature="UserApiTest.testGetUsers()[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" name="testGetUsers" class="com.framework.tests.api.UserApiTest"/>
+        <method signature="UserApiTest.testUpdatePost()[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" name="testUpdatePost" class="com.framework.tests.api.UserApiTest"/>
+      </group> <!-- api -->
+    </groups>
+    <test started-at="2026-08-12T18:43:40 IST" name="Command line test" finished-at="2026-08-12T18:44:06 IST" duration-ms="25476">
+      <class name="com.framework.tests.api.UserApiTest">
+        <test-method is-config="true" signature="setUpSuite()[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:40 IST" name="setUpSuite" finished-at="2026-08-12T18:43:40 IST" duration-ms="207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpSuite -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:40 IST" name="setUp" finished-at="2026-08-12T18:43:40 IST" duration-ms="34" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.framework.tests.api.UserApiTest.testDeletePost()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testDeletePost()[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:41 IST" name="testDeletePost" finished-at="2026-08-12T18:43:56 IST" duration-ms="15151" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Response time 5249ms exceeded max 5000ms expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Response time 5249ms exceeded max 5000ms expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.framework.api.ApiResponseValidator.validateResponseTimeLessThan(ApiResponseValidator.java:93)
+at com.framework.tests.api.UserApiTest.testDeletePost(UserApiTest.java:84)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeletePost -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:41 IST" name="setUp" finished-at="2026-08-12T18:43:41 IST" duration-ms="33" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.framework.tests.api.UserApiTest.testCreatePost(com.framework.model.User)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:41 IST" name="setUp" finished-at="2026-08-12T18:43:41 IST" duration-ms="32" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.framework.tests.api.UserApiTest.testCreatePost(com.framework.model.User)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:41 IST" name="setUp" finished-at="2026-08-12T18:43:41 IST" duration-ms="32" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.framework.tests.api.UserApiTest.testCreatePost(com.framework.model.User)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCreatePost(com.framework.model.User)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:41 IST" name="testCreatePost" data-provider="jsonData" finished-at="2026-08-12T18:43:56 IST" duration-ms="14332" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User[id=3, firstName='Tobias', lastName='Funke', email='tobias.funke@reqres.in']]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Response time 5261ms exceeded max 5000ms expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Response time 5261ms exceeded max 5000ms expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.framework.api.ApiResponseValidator.validateResponseTimeLessThan(ApiResponseValidator.java:93)
+at com.framework.tests.api.UserApiTest.testCreatePost(UserApiTest.java:58)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreatePost -->
+        <test-method signature="testCreatePost(com.framework.model.User)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:41 IST" name="testCreatePost" data-provider="jsonData" finished-at="2026-08-12T18:43:56 IST" duration-ms="14319" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User[id=2, firstName='Lindsay', lastName='Ferguson', email='lindsay.ferguson@reqres.in']]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Response time 5279ms exceeded max 5000ms expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Response time 5279ms exceeded max 5000ms expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.framework.api.ApiResponseValidator.validateResponseTimeLessThan(ApiResponseValidator.java:93)
+at com.framework.tests.api.UserApiTest.testCreatePost(UserApiTest.java:58)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreatePost -->
+        <test-method signature="testCreatePost(com.framework.model.User)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:41 IST" name="testCreatePost" data-provider="jsonData" finished-at="2026-08-12T18:43:56 IST" duration-ms="14319" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User[id=1, firstName='Michael', lastName='Lawson', email='michael.lawson@reqres.in']]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Response time 5261ms exceeded max 5000ms expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Response time 5261ms exceeded max 5000ms expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.framework.api.ApiResponseValidator.validateResponseTimeLessThan(ApiResponseValidator.java:93)
+at com.framework.tests.api.UserApiTest.testCreatePost(UserApiTest.java:58)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreatePost -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:56 IST" name="tearDown" finished-at="2026-08-12T18:43:56 IST" duration-ms="77" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreatePost status=FAILURE method=UserApiTest.testCreatePost(com.framework.model.User)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:56 IST" name="tearDown" finished-at="2026-08-12T18:43:56 IST" duration-ms="70" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDeletePost status=FAILURE method=UserApiTest.testDeletePost()[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:56 IST" name="tearDown" finished-at="2026-08-12T18:43:56 IST" duration-ms="69" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreatePost status=FAILURE method=UserApiTest.testCreatePost(com.framework.model.User)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:56 IST" name="tearDown" finished-at="2026-08-12T18:43:56 IST" duration-ms="67" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreatePost status=FAILURE method=UserApiTest.testCreatePost(com.framework.model.User)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:56 IST" name="setUp" finished-at="2026-08-12T18:43:56 IST" duration-ms="20" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.framework.tests.api.UserApiTest.testUpdatePost()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:56 IST" name="setUp" finished-at="2026-08-12T18:43:56 IST" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.framework.tests.api.UserApiTest.testGetUsers()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetUsers()[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:56 IST" name="testGetUsers" finished-at="2026-08-12T18:44:06 IST" duration-ms="9451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUsers -->
+        <test-method signature="testUpdatePost()[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:43:56 IST" name="testUpdatePost" finished-at="2026-08-12T18:44:05 IST" duration-ms="9289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdatePost -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:44:06 IST" name="tearDown" finished-at="2026-08-12T18:44:06 IST" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testUpdatePost status=SUCCESS method=UserApiTest.testUpdatePost()[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845]" started-at="2026-08-12T18:44:06 IST" name="tearDown" finished-at="2026-08-12T18:44:06 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testGetUsers status=SUCCESS method=UserApiTest.testGetUsers()[pri:0, instance:com.framework.tests.api.UserApiTest@319bc845] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.framework.tests.api.UserApiTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

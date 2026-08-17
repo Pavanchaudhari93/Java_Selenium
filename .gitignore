@@ -1,0 +1,28 @@
+# Build output
+target/
+*.class
+
+# Logs
+logs/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+
+# Local config overrides / secrets
+*.local
+.env
+
+# Allure
+allure-results/
+
+# Reports / screenshots
+reports/
+screenshots/

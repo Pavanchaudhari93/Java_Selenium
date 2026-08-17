@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \".claude/skills/framework-overview\" \".claude/skills/add-page-object\" \".claude/skills/add-ui-test\" \".claude/skills/add-api-test\" \".claude/skills/add-db-validation\" \".claude/skills/add-security-test\")",
+      "Edit(/.claude/skills/add-api-test/**)",
+      "Edit(/.claude/skills/add-db-validation/**)",
+      "Edit(/.claude/skills/add-security-test/**)",
+      "Bash(mvn -q -o compile)",
+      "Bash(java -version)",
+      "Bash(/usr/libexec/java_home -V)",
+      "Bash(mvn -q -o compile -Dmaven.compiler.release=15)"
+    ],
+    "additionalDirectories": [
+      "/Users/pavanchaudhari/AI Framwork/Java_Selenium/.claude/skills"
+    ]
+  }
+}
