@@ -1,6 +1,7 @@
 package com.framework.listeners;
 
 import com.framework.config.ConfigReader;
+import com.framework.utils.AllureBaselineManager;
 import io.qameta.allure.testng.AllureTestNg;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -20,6 +21,9 @@ import java.util.Properties;
  * attachments and test status) and additionally writes
  * {@code environment.properties} before execution so the Allure report shows
  * the browser, environment and execution mode used for the run.
+ * <p>
+ * Also archives the previous run's Allure results for run-to-run comparison
+ * via {@link AllureBaselineManager}.
  */
 public class AllureListener extends AllureTestNg implements IExecutionListener {
 
@@ -27,6 +31,9 @@ public class AllureListener extends AllureTestNg implements IExecutionListener {
 
     @Override
     public void onExecutionStart() {
+        // Archive previous run's results for comparison before this run starts
+        AllureBaselineManager.archivePreviousAllureResults();
+
         try {
             String resultsDir = System.getProperty("allure.results.directory", "target/allure-results");
             Path dir = Paths.get(resultsDir);

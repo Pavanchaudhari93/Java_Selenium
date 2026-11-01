@@ -11,6 +11,7 @@
         <listener class-name="com.framework.listeners.TestListener"/>
         <listener class-name="com.framework.listeners.RetryListener"/>
         <listener class-name="com.framework.listeners.AllureListener"/>
+        <listener class-name="com.framework.listeners.ConsoleLogAttachmentListener"/>
     </listeners>
 
     <!-- ======================= UI Tests ======================= -->

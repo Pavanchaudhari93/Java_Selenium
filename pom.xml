@@ -44,6 +44,15 @@
         <zap.version>1.17.0</zap.version>
         <hikaricp.version>6.2.1</hikaricp.version>
         <commons.io.version>2.18.0</commons.io.version>
+        <commons.csv.version>1.12.0</commons.csv.version>
+
+        <!-- Allure comparison defaults (override with -D) -->
+        <allure.compare.previous>Execution_Reports/Allure_Previous/allure-results</allure.compare.previous>
+        <allure.compare.current>Execution_Reports/Allure_Report/allure-results</allure.compare.current>
+        <allure.compare.output>Execution_Reports/Allure_Comparison</allure.compare.output>
+        <allure.compare.threshold>-1</allure.compare.threshold>
+        <allure.compare.includeBroken>false</allure.compare.includeBroken>
+        <allure.previous.directory>target/allure-previous</allure.previous.directory>
 
         <!-- Plugin versions -->
         <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
@@ -136,6 +145,13 @@
             <groupId>com.opencsv</groupId>
             <artifactId>opencsv</artifactId>
             <version>${opencsv.version}</version>
+        </dependency>
+
+        <!-- ===================== Apache Commons CSV (for comparison reports) ===================== -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>${commons.csv.version}</version>
         </dependency>
 
         <!-- ===================== Apache POI (Excel DataProviders) ===================== -->
@@ -239,6 +255,35 @@
                     <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
                     <reportDirectory>${project.build.directory}/site/allure-maven-plugin</reportDirectory>
                 </configuration>
+            </plugin>
+
+            <!-- Allure run comparison: mvn test-compile exec:exec@allure-compare -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <id>allure-compare</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>java</executable>
+                            <classpathScope>test</classpathScope>
+                            <arguments>
+                                <argument>-classpath</argument>
+                                <classpath />
+                                <argument>-Dallure.compare.previous=${allure.compare.previous}</argument>
+                                <argument>-Dallure.compare.current=${allure.compare.current}</argument>
+                                <argument>-Dallure.compare.output=${allure.compare.output}</argument>
+                                <argument>-Dallure.compare.threshold=${allure.compare.threshold}</argument>
+                                <argument>-Dallure.compare.includeBroken=${allure.compare.includeBroken}</argument>
+                                <argument>com.framework.reporting.comparison.AllureComparisonRunner</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
