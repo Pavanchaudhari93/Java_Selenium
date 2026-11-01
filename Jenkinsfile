@@ -666,8 +666,7 @@ pipeline {
                                 defaultValue: false,
                                 description: 'Clear all saved Trigger History. Disables any Active / Scheduled Triggers.')
                         [$class: 'StringParameterDefinition', name: 'REGRESSION_THRESHOLD', defaultValue: '0', description: 'Fail the build when Passed -> Failed exceeds this count. Use -1 to report without gating.']
-                        booleanParam(name: 'INCLUDE_BROKEN', defaultValue: false,
-                                     description: 'Also count Passed -> Broken against the threshold')
+                        [$class: 'BooleanParameterDefinition', name: 'INCLUDE_BROKEN', defaultValue: false, description: 'Also count Passed -> Broken against the threshold']
                     ])
                 ])
                     
