@@ -103,7 +103,7 @@ pipeline {
                     // ⚠️ Keep this list in sync with the parameters([...]) block in STAGE_O_E-2
                     def expectedParams = ['branch', 'env', 'browserType', 'suiteFile', 'agentLabel', 'HEADLESS',
                                           'refreshChoices', 'scheduleBuild', 'scheduleTime', 'scheduleDay',
-                                          'deleteTriggers', 'clearTriggerHistory']
+                                          'deleteTriggers', 'clearTriggerHistory', 'REGRESSION_THRESHOLD', 'INCLUDE_BROKEN']
                     def missingParams  = expectedParams.findAll { !params.containsKey(it) }
                     def firstRun       = !missingParams.isEmpty()
                     if (firstRun) echo "[Jenkins: STAGE_O_A] Parameter(s) not registered on the Job yet ${missingParams} — forcing Refresh_Choices . . ."
@@ -665,8 +665,7 @@ pipeline {
                         booleanParam(name: 'clearTriggerHistory',
                                 defaultValue: false,
                                 description: 'Clear all saved Trigger History. Disables any Active / Scheduled Triggers.')
-                        string(name: 'REGRESSION_THRESHOLD', defaultValue: '0',
-                               description: 'Fail the build when Passed -> Failed exceeds this count. Use -1 to report without gating.')
+                        [$class: 'StringParameterDefinition', name: 'REGRESSION_THRESHOLD', defaultValue: '0', description: 'Fail the build when Passed -> Failed exceeds this count. Use -1 to report without gating.']
                         booleanParam(name: 'INCLUDE_BROKEN', defaultValue: false,
                                      description: 'Also count Passed -> Broken against the threshold')
                     ])
